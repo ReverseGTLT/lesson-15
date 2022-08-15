@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixin";
 
 .header {
     padding: 25px 51px 23px 51px;
@@ -27,32 +28,27 @@
         &__btn:not(:last-child) {
             outline: 1px solid $color-text;
             background-color: $color-total;
-            max-width: 120px;
-            min-height: 45px;
+            @include btn-header-size;
         }
         &__btn:not(:first-child) {
             outline: 1px solid $color-btn;
             background-color: $color-btn;
-            max-width: 120px;
-            min-height: 45px;
+            @include btn-header-size;
         }
         &__link {
             font-weight: $font-weight * 6;
             font-size: $font-size * 3 + 1;
             display: block;
-            padding: 15px 35px;
+            padding: 13px 35px;
             &--highlight {
                 color: $color-total;
-                padding: 15px 22px;
+                padding: 13px 22px;
             }
-        }
-       
+        } 
     }
-
-    
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1460px) {
     .header {
         flex-direction: column;
         justify-content: center;

@@ -1,0 +1,8 @@
+@mixin btn-header-size {
+    max-width: 120px;
+    min-height: 45px;
+}
+@mixin btn-main-size {
+    max-width: 160px;
+    min-height: 60px;
+}

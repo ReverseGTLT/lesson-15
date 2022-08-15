@@ -1,0 +1,64 @@
+@import "variables";
+@import "mixin";
+
+.main {
+    background-color: $color-total;
+    border-top: 1px solid $color-body;
+    &-delivery {
+        padding-bottom: 172px;
+        margin: 128px 0 0 76px;
+        max-width: 1330px;
+        &__info {
+            background-image: url(../../images/mainaccelerate.svg);
+            background-repeat: no-repeat;
+            background-position: 94.5% 70%;
+            &-title {
+                font-weight: $font-weight * 6;
+                font-size: $font-size * 13;
+                line-height: $line-hight * 14;
+                margin-bottom: 51px;
+                max-width: 550px;
+            }
+            &-description {
+                font-size: $font-size * 5;
+                max-width: 471px;
+                line-height: $line-hight * 7;
+            }
+            &-btn {
+                margin: 50px 0 25px 0;
+                display: flex;
+                gap: 12px;
+            }
+            &-item:not(:first-child) {
+                @include btn-main-size;
+                outline: 1px solid $color-text;
+            }
+            &-item:not(:last-child) {
+                @include btn-main-size;
+                outline: 1px solid $color-btn;
+                background-color: $color-btn;
+            }
+            &-link {
+                font-weight: $font-weight * 6;
+                font-size: $font-size * 3 + 1;
+                line-height: $line-hight * 12;
+                padding: 0 29px;
+                &--highlight {
+                    color: $color-total; 
+                    padding: 0 41px;
+                }
+            }
+            &-explanation {
+                font-weight: $font-weight * 4;
+                font-size: $font-size * 3;
+                line-height: $line-hight * 5;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .main-delivery {
+        
+    }
+}
