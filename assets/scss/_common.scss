@@ -1,0 +1,27 @@
+@import "variables";
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Graphik LCG";
+    background-color: $color-body;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text;
+}
+
+.container {
+    max-width: $width-site;
+    margin: 0 auto;
+    background-color: $color-total;
+}

@@ -1,3 +1,30 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Graphik LCG";
+  background-color: #D8D8D8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
 @font-face {
   font-family: "Graphik LCG";
   src: url("../../fonts/GraphikLCG-Semibold.woff2") format("woff2");
@@ -12,19 +39,83 @@
   font-style: normal;
   font-display: swap;
 }
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Graphik LCG";
+.header {
+  padding: 25px 51px 23px 51px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  margin: inherit;
-  padding: inherit;
+.header-logo {
+  padding-right: 51px;
+}
+.header-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 54px;
+}
+.header-navbar__link {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.header-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-left: 26.9%;
+}
+.header-login__btn:not(:last-child) {
+  outline: 1px solid #000;
+  background-color: #fff;
+  max-width: 120px;
+  min-height: 45px;
+}
+.header-login__btn:not(:first-child) {
+  outline: 1px solid #FF6336;
+  background-color: #FF6336;
+  max-width: 120px;
+  min-height: 45px;
+}
+.header-login__link {
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  padding: 15px 35px;
+}
+.header-login__link--highlight {
+  color: #fff;
+  padding: 15px 22px;
+}
+@media (max-width: 1440px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 25px;
+  }
+  .header-login {
+    margin: 0;
+  }
+  .header-navbar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }

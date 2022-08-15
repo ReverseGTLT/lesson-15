@@ -1,0 +1,67 @@
+@import "variables";
+
+.header {
+    padding: 25px 51px 23px 51px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &-logo {
+        padding-right: 51px;
+    }
+    &-navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 54px;
+        &__link {
+            font-size: $font-size * 3;
+            font-weight: $font-weight * 4;
+            line-height: $line-hight * 4;
+            text-align: left;
+        }
+    }
+    &-login {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 26.9%;
+        &__btn:not(:last-child) {
+            outline: 1px solid $color-text;
+            background-color: $color-total;
+            max-width: 120px;
+            min-height: 45px;
+        }
+        &__btn:not(:first-child) {
+            outline: 1px solid $color-btn;
+            background-color: $color-btn;
+            max-width: 120px;
+            min-height: 45px;
+        }
+        &__link {
+            font-weight: $font-weight * 6;
+            font-size: $font-size * 3 + 1;
+            display: block;
+            padding: 15px 35px;
+            &--highlight {
+                color: $color-total;
+                padding: 15px 22px;
+            }
+        }
+       
+    }
+
+    
+}
+
+@media (max-width: 1440px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        &-login {
+            margin: 0;
+        }
+        &-navbar {
+            justify-content: center;
+        }
+    }
+}
