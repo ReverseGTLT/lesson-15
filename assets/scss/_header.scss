@@ -1,26 +1,24 @@
 @import "variables";
 @import "mixin";
 
-/*.header {
-    padding: 25px 51px 23px 51px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;*/
 .header {
-    padding: 25px 51px 23px 51px;
+    padding: 25px 0 23px 0;
     display: grid;
     grid-template-columns: 180px 1fr 247px;
     align-items: center;
     justify-content: space-between;
+
     &-logo {
         padding-right: 51px;
     }
-    &-navbar {
+
+    &-list {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
         gap: 54px;
+        list-style: none;
+
         &__link {
             font-size: $font-size * 3;
             font-weight: $font-weight * 4;
@@ -28,32 +26,43 @@
             text-align: left;
         }
     }
+
     &-login {
         display: flex;
         align-items: center;
         gap: 10px;
+
         &__btn:not(:last-child) {
             outline: 1px solid $color-text;
-            background-color: $color-total;
-            @include btn-header-size;
+
         }
+
         &__btn:not(:first-child) {
             outline: 1px solid $color-btn;
-            background-color: $color-btn;
-            @include btn-header-size;
+
         }
+
         &__link {
             font-weight: $font-weight * 6;
             font-size: $font-size * 3 + 1;
             display: block;
             padding: 13px;
             text-align: center;
+            @include btn-header-size;
+            background-color: $color-total;
+            border: 0;
+
             &--highlight {
                 color: $color-total;
                 padding: 13px;
                 text-align: center;
+                background-color: $color-btn;
             }
-        } 
+        }
+
+        &__link:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -62,13 +71,16 @@
         grid-template-columns: 1fr;
         gap: 25px;
         justify-items: center;
-        &-login {
-            margin: 0;
-        }
+
         &-navbar {
             justify-content: center;
             padding-right: 0;
             flex-wrap: wrap;
+        }
+
+        &-list {
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }

@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Graphik LCG";
+    font-family: "Graphik LCG", sans-serif;
     background-color: $color-body;
 }
 
@@ -24,4 +24,12 @@ a {
     max-width: $width-site;
     margin: 0 auto;
     background-color: $color-total;
+}
+
+.container-site {
+    padding: 0 75px;
+}
+
+.container-site--header {
+    border-bottom: 1px solid $color-body;
 }
