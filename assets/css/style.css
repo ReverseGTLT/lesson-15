@@ -75,29 +75,31 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin-left: 26.9%;
+  margin-left: 360px;
 }
 .header-login__btn:not(:last-child) {
   outline: 1px solid #000;
   background-color: #fff;
-  max-width: 120px;
+  width: 118px;
   min-height: 45px;
 }
 .header-login__btn:not(:first-child) {
   outline: 1px solid #FF6336;
   background-color: #FF6336;
-  max-width: 120px;
+  width: 118px;
   min-height: 45px;
 }
 .header-login__link {
   font-weight: 600;
   font-size: 16px;
   display: block;
-  padding: 13px 35px;
+  padding: 13px;
+  text-align: center;
 }
 .header-login__link--highlight {
   color: #fff;
-  padding: 13px 22px;
+  padding: 13px;
+  text-align: center;
 }
 .main {
   background-color: #fff;
@@ -133,30 +135,64 @@ a {
   gap: 12px;
 }
 .main-delivery__info-item:not(:first-child) {
-  max-width: 160px;
+  width: 160px;
   min-height: 60px;
   outline: 1px solid #000;
+  text-align: center;
+  padding: 0 5px;
 }
 .main-delivery__info-item:not(:last-child) {
-  max-width: 160px;
+  width: 160px;
   min-height: 60px;
   outline: 1px solid #FF6336;
   background-color: #FF6336;
+  text-align: center;
+  padding: 0 5px;
 }
 .main-delivery__info-link {
   font-weight: 600;
   font-size: 16px;
   line-height: 60px;
-  padding: 0 29px;
 }
 .main-delivery__info-link--highlight {
   color: #fff;
-  padding: 0 41px;
 }
 .main-delivery__info-explanation {
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
+  max-width: 370px;
+}
+.main-companies {
+  padding: 108px 75px;
+  background-color: #FF9C7D;
+}
+.main-companies__title {
+  max-width: 720px;
+  margin-bottom: 70px;
+  margin: 0 auto 68px;
+  padding-left: 115px;
+}
+.main-companies__title-text {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 60px;
+}
+.main-companies__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 103px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
 }
 @media (max-width: 1460px) {
   .header {
@@ -181,6 +217,12 @@ a {
     min-height: 950px;
     background-position: bottom left;
     background-size: auto 40%;
+  }
+  .main-companies__title {
+    padding-left: 0px;
+  }
+  .main-companies__title-text {
+    font-size: 38.4615384615px;
   }
 }
 @media (max-width: 633px) {

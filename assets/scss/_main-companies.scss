@@ -1,0 +1,35 @@
+@import "variables";
+
+.main-companies {
+    padding: 108px 75px;
+    background-color: $color-companies;
+    &__title {
+        max-width: 720px;
+        margin-bottom: 70px;
+        margin: 0 auto 68px;
+        padding-left: 115px;
+        &-text {
+            text-align: center;
+            font-weight: $font-weight * 6;
+            font-size: $font-size * 10;
+            line-height: $line-hight * 12;
+        }
+    }
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 103px;
+        align-items: center;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1460px) {
+    .main-companies__title {
+        padding-left: 0px;
+        &-text {
+            font-size: calc($font-size * 10 /1.3);
+        }
+    }
+}

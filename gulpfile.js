@@ -73,4 +73,4 @@ function watchFiles() {
 task('comb', series(comb));
 task('scss', series(scss));
 task('dev', series(scssDev));
-//task('watch', watchFiles);
+task('watch', watchFiles);

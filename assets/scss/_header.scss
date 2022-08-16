@@ -24,7 +24,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-left: 26.9%;
+        margin-left: 360px;
         &__btn:not(:last-child) {
             outline: 1px solid $color-text;
             background-color: $color-total;
@@ -39,10 +39,12 @@
             font-weight: $font-weight * 6;
             font-size: $font-size * 3 + 1;
             display: block;
-            padding: 13px 35px;
+            padding: 13px;
+            text-align: center;
             &--highlight {
                 color: $color-total;
-                padding: 13px 22px;
+                padding: 13px;
+                text-align: center;
             }
         } 
     }
