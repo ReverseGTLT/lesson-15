@@ -1,17 +1,25 @@
 @import "variables";
 @import "mixin";
 
-.header {
+/*.header {
     padding: 25px 51px 23px 51px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;*/
+.header {
+    padding: 25px 51px 23px 51px;
+    display: grid;
+    grid-template-columns: 180px 1fr 247px;
+    align-items: center;
+    justify-content: space-between;
     &-logo {
         padding-right: 51px;
     }
     &-navbar {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: center;
         gap: 54px;
         &__link {
             font-size: $font-size * 3;
@@ -24,7 +32,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-left: 360px;
         &__btn:not(:last-child) {
             outline: 1px solid $color-text;
             background-color: $color-total;
@@ -50,16 +57,18 @@
     }
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 1280px) {
     .header {
-        flex-direction: column;
-        justify-content: center;
+        grid-template-columns: 1fr;
         gap: 25px;
+        justify-items: center;
         &-login {
             margin: 0;
         }
         &-navbar {
             justify-content: center;
+            padding-right: 0;
+            flex-wrap: wrap;
         }
     }
 }
