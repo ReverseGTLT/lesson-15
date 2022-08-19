@@ -1,4 +1,4 @@
-@import "variables";
+@use "../presets" as *;
 
 body {
     box-sizing: border-box;
@@ -26,10 +26,20 @@ a {
     background-color: $color-total;
 }
 
-.container-site {
+.main-container {
     padding: 0 75px;
 }
 
-.container-site--header {
+.container-header {
     border-bottom: 1px solid $color-body;
+    padding: 0 75px;
+}
+
+@include md {
+    .container-header {
+        padding: 0 25px;
+    }
+    .main-container {
+        padding: 0 25px;
+    }
 }

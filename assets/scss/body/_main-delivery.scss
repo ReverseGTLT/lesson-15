@@ -1,0 +1,129 @@
+@use "../presets" as *;
+
+.main {
+    background-color: $color-total;
+
+    &-delivery {
+        padding-bottom: 172px;
+        margin-top: 85px;
+        max-width: 1330px;
+        display: grid;
+        grid-template-columns: 540px 1fr;
+        &__info {
+
+
+            &-title {
+                font-weight: $font-weight * 6;
+                font-size: $font-size * 13;
+                line-height: $line-hight * 14;
+                margin-bottom: 51px;
+                max-width: 550px;
+            }
+
+            &-description {
+                font-size: $font-size * 5;
+                max-width: 471px;
+                line-height: $line-hight * 7;
+            }
+
+            &-btn {
+                margin: 50px 0 25px 0;
+                display: flex;
+                gap: 12px;
+            }
+
+            &-item:not(:first-child) {
+                text-align: center;
+            }
+
+            &-item:not(:last-child) {
+                text-align: center;
+            }
+
+            &-link {
+                font-weight: $font-weight * 6;
+                font-size: $font-size * 3 + 1;
+                line-height: $line-hight * 12;
+                @include btn-main-size;
+                padding: 0 5px;
+                background-color: $color-total;
+                border: 0;
+                outline: 1px solid $color-text;
+                cursor: pointer;
+                &--highlight {
+                    color: $color-total;
+                    background-color: $color-btn;
+                    outline: 1px solid $color-btn;
+                    @include btn-main-size;
+
+                }
+            }
+
+            &-explanation {
+                font-weight: $font-weight * 4;
+                font-size: $font-size * 3;
+                line-height: $line-hight * 5;
+                max-width: 370px;
+            }
+        }
+        &__picture {
+            background-image: url(../../images/mainaccelerate.svg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+
+        }
+    }
+}
+
+@include lg {
+    .main-delivery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-bottom: 30px;
+        &__info {
+            &-title {
+                font-size: calc($font-size * 13 /2);
+                line-height: calc($line-hight * 14 / 2);
+            }
+
+            &-description {
+                font-size: calc($font-size * 5 /2);
+            }
+            &-explanation {
+                font-size: calc($font-size * 3 /1.5);
+            }
+            &-item:not(:first-child),
+            &-item:not(:last-child) {
+                width: 118px;;
+            }
+            &-link {
+                font-size: $font-size * 2 + 1;
+                max-width: 118px;
+                &--highlight {
+                    color: $color-total;
+                }
+            }
+        }
+        &__picture {
+            background-position: top;
+        }
+    }
+}
+
+@include sm {
+    .main-delivery__info {
+        &-title {
+            font-size: calc($font-size * 13 /3);
+            line-height: calc($line-hight * 14 / 3);
+        }
+        &-description {
+            font-size: calc($font-size * 5 /2);
+            line-height: calc($line-hight * 7 /2);
+        }
+        &-explanation {
+            font-size: calc($font-size * 3 /1.5);
+        }
+    }
+}
+

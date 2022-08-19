@@ -1,7 +1,3 @@
-@import "fonts";
-@import "variables";
-@import "common";
-@import "header";
-@import "main-delivery";
-@import "main-companies";
-@import "main-basis";
+@use "body/" as *;
+@use "presets/" as *;
+@use "others/" as *;
