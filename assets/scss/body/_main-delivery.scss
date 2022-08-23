@@ -10,6 +10,12 @@
         display: grid;
         grid-template-columns: 540px 1fr;
 
+        @include lg {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding-bottom: 30px;
+        }
+
         &__info {
             &-title {
                 font-weight: $font-weight * 6;
@@ -17,12 +23,31 @@
                 line-height: $line-hight * 14;
                 margin-bottom: 51px;
                 max-width: 550px;
+
+                @include lg {
+                    font-size: calc($font-size * 13 /2);
+                    line-height: calc($line-hight * 14 / 2);
+                }
+
+                @include md {
+                    font-size: calc($font-size * 13 /3);
+                    line-height: calc($line-hight * 14 / 3);
+                }
             }
 
             &-description {
                 font-size: $font-size * 5;
                 max-width: 471px;
                 line-height: $line-hight * 7;
+
+                @include lg {
+                    font-size: calc($font-size * 5 /2);
+                }
+
+                @include sm {
+                    font-size: calc($font-size * 5 /2);
+                    line-height: calc($line-hight * 7 /2);
+                }
             }
 
             &-btn {
@@ -33,10 +58,18 @@
 
             &-item:not(:first-child) {
                 text-align: center;
+
+                @include lg {
+                    width: 118px;
+                }
             }
 
             &-item:not(:last-child) {
                 text-align: center;
+
+                @include lg {
+                    width: 118px;
+                }
             }
 
             &-link {
@@ -50,12 +83,16 @@
                 outline: 1px solid $color-text;
                 cursor: pointer;
 
+                @include lg {
+                    font-size: $font-size * 2 + 1;
+                    max-width: 118px;
+                }
+
                 &--highlight {
                     color: $color-total;
                     background-color: $color-btn;
                     outline: 1px solid $color-btn;
                     @include btn-main-size;
-
                 }
             }
 
@@ -64,6 +101,14 @@
                 font-size: $font-size * 3;
                 line-height: $line-hight * 5;
                 max-width: 370px;
+
+                @include lg {
+                    font-size: calc($font-size * 3 /1.5);
+                }
+
+                @include sm {
+                    font-size: calc($font-size * 3 /1.5);
+                }
             }
         }
 
@@ -73,66 +118,9 @@
             background-position: bottom;
             background-size: contain;
 
-        }
-    }
-}
-
-@include lg {
-    .main-delivery {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        padding-bottom: 30px;
-
-        &__info {
-            &-title {
-                font-size: calc($font-size * 13 /2);
-                line-height: calc($line-hight * 14 / 2);
+            @include lg {
+                background-position: top;
             }
-
-            &-description {
-                font-size: calc($font-size * 5 /2);
-            }
-
-            &-explanation {
-                font-size: calc($font-size * 3 /1.5);
-            }
-
-            &-item:not(:first-child),
-            &-item:not(:last-child) {
-                width: 118px;
-                ;
-            }
-
-            &-link {
-                font-size: $font-size * 2 + 1;
-                max-width: 118px;
-
-                &--highlight {
-                    color: $color-total;
-                }
-            }
-        }
-
-        &__picture {
-            background-position: top;
-        }
-    }
-}
-
-@include sm {
-    .main-delivery__info {
-        &-title {
-            font-size: calc($font-size * 13 /3);
-            line-height: calc($line-hight * 14 / 3);
-        }
-
-        &-description {
-            font-size: calc($font-size * 5 /2);
-            line-height: calc($line-hight * 7 /2);
-        }
-
-        &-explanation {
-            font-size: calc($font-size * 3 /1.5);
         }
     }
 }

@@ -1,6 +1,9 @@
 @use "../presets/" as *;
 
-@each $img in first, second, third, fourth {
+@each $img in first,
+second,
+third,
+fourth {
     .main-info__gif--#{$img} {
         width: 632px;
         height: 632px;
@@ -17,11 +20,13 @@
         grid-template-columns: 1fr;
         row-gap: 250px;
         margin-top: 90px;
-        padding-bottom: 125px;
+        padding-bottom: 150px;
+
         @include md {
             row-gap: 150px;
         }
     }
+
     &-info {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -32,61 +37,75 @@
             grid-template-columns: 1fr;
             gap: 50px;
         }
+
         &__text {
             display: flex;
             flex-direction: column;
             gap: 30px;
             justify-content: center;
+
             @include md {
                 text-align: center;
             }
+
             &--order {
                 order: 1;
+
                 @include xl {
                     order: 0;
                     text-align: right;
                 }
+
                 @include md {
                     text-align: center;
                 }
             }
         }
+
         &__title {
             font-weight: $font-weight *6;
             font-size: $font-size * 10;
             line-height: $line-hight * 12;
+
             @include lg {
                 font-size: $font-size * 10 * 0.5;
                 line-height: $line-hight * 12 * 0.5;
             }
         }
+
         &__description {
             font-size: $font-size * 4;
             line-height: $line-hight * 6;
+
             @include lg {
                 font-size: calc($font-size * 4 / 1.5);
                 line-height: calc($line-hight * 6 / 2);
             }
 
         }
+
         &__footnote {
             font-weight: $font-weight *6;
             font-size: $font-size * 4;
             line-height: $line-hight * 6;
+
             @include lg {
                 font-size: calc($font-size * 4 / 1.5);
                 line-height: calc($line-hight * 6 / 2);
             }
         }
+
         &__gif--second,
         &__gif--fourth {
             @include xl {
                 justify-self: flex-end;
             }
+
             @include md {
                 justify-self: center;
             }
         }
+
         &__gif {
             @include md {
                 justify-self: center;
@@ -94,11 +113,9 @@
                 height: 300px;
             }
         }
+
         &__link {
             text-decoration: underline;
         }
     }
 }
-
-
-

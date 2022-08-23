@@ -28,18 +28,17 @@ a {
 
 .main-container {
     padding: 0 75px;
+
+    @include md {
+        padding: 0 25px;
+    }
 }
 
 .container-header {
     border-bottom: 1px solid $color-body;
     padding: 0 75px;
-}
 
-@include md {
-    .container-header {
-        padding: 0 25px;
-    }
-    .main-container {
+    @include md {
         padding: 0 25px;
     }
 }

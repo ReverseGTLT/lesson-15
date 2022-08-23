@@ -6,8 +6,28 @@
     grid-template-columns: 180px 1fr 247px;
     align-items: center;
     gap: 5px;
+
+    @include xl {
+        grid-template-columns: 150px 1fr 247px;
+    }
+
+    @include lg {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-items: left;
+
+    }
+
     &-logo {
         padding-right: 51px;
+    }
+
+    &-navbar {
+        @include lg {
+            justify-content: left;
+            padding-right: 0;
+            flex-wrap: wrap;
+        }
     }
 
     &-list {
@@ -17,11 +37,33 @@
         gap: 54px;
 
         list-style: none;
+
+        @include xl {
+            gap: 20px;
+        }
+
+        @include lg {
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        @include sm {
+            gap: 15px;
+        }
+
         &__link {
             font-size: $font-size * 3;
             font-weight: $font-weight * 4;
             line-height: $line-hight * 4;
             text-align: left;
+
+            @include lg {
+                font-size: calc($font-size * 3 / 1.2);
+            }
+
+            @include sm {
+                font-size: calc($font-size * 3 / 1.5);
+            }
         }
     }
 
@@ -29,6 +71,10 @@
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include lg {
+            font-size: $font-size * 2 + 1;
+        }
 
         &__btn:not(:last-child) {
             outline: 1px solid $color-text;
@@ -48,6 +94,10 @@
             background-color: $color-total;
             border: 0;
 
+            @include sm {
+                font-size: $font-size * 1.5 + 1;
+            }
+
             &--highlight {
                 color: $color-total;
                 padding: 13px;
@@ -58,58 +108,6 @@
 
         &__link:hover {
             cursor: pointer;
-        }
-    }
-}
-@include xl {
-    .header {
-        grid-template-columns: 150px 1fr 247px;
-        &-list {
-            gap: 20px;
-        }
-    }
-}
-
-@include lg {
-    .header {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        justify-items: left;
-
-        &-navbar {
-            justify-content: left;
-            padding-right: 0;
-            flex-wrap: wrap;
-        }
-
-        &-list {
-            flex-wrap: wrap;
-            justify-content: left;
-            &__link {
-                font-size: calc($font-size * 3 / 1.2);
-            }
-        }
-        &-login {
-            &__link {
-                font-size: $font-size * 2 + 1;
-            }
-        }
-
-    }
-}
-
-@include sm {
-    .header {
-        &-list {
-            gap: 15px;
-            &__link {
-                font-size: calc($font-size * 3 / 1.5);
-            }
-        }
-        &-login {
-            &__link {
-                font-size: $font-size * 1.5 + 1;
-            }
         }
     }
 }
