@@ -11,29 +11,33 @@
         grid-template-columns: 540px 1fr;
         @include xl {
             grid-template-columns: 1fr;
-            grid-template-rows: 520px 1fr;
+
             padding-bottom: 30px;
         }
 
         @include lg {
             grid-template-columns: 1fr;
-            grid-template-rows: 520px 1fr;
+
             padding-bottom: 320px;
         }
 
         @include md {
             grid-template-columns: 1fr;
-            grid-template-rows: 580px 1fr;
+
             padding-bottom: 200px;
         }
 
         @include sm {
             grid-template-columns: 1fr;
-            grid-template-rows: 650px 1fr;
+
             padding-bottom: 140px;
         }
 
         &__info {
+            @include lg {
+                text-align: center;
+                margin: auto;
+            }
             &-title {
                 font-weight: $font-weight * 6;
                 font-size: $font-size * 13;
@@ -55,14 +59,19 @@
                 line-height: $line-hight * 7;
 
                 @include lg {
-                    font-size: calc($font-size * 5 /1.2);
+                    text-align: center;
+                    margin: auto;
                 }
+
             }
 
             &-btn {
                 margin: 50px 0 25px 0;
                 display: flex;
                 gap: 12px;
+                @include lg {
+                    justify-content: center;
+                }
             }
 
             &-item:not(:first-child) {
@@ -110,9 +119,9 @@
                 font-size: $font-size * 3;
                 line-height: $line-hight * 5;
                 max-width: 370px;
-
                 @include lg {
-                    font-size: calc($font-size * 3 /1.2);
+                    text-align: center;
+                    margin: auto;
                 }
             }
         }
