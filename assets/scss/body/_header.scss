@@ -60,10 +60,6 @@
             @include lg {
                 font-size: calc($font-size * 3 / 1.2);
             }
-
-            @include sm {
-                font-size: calc($font-size * 3 / 1.5);
-            }
         }
     }
 
@@ -94,8 +90,8 @@
             background-color: $color-total;
             border: 0;
 
-            @include sm {
-                font-size: $font-size * 1.5 + 1;
+            @include lg {
+                font-size: calc($font-size * 3 /1.1);
             }
 
             &--highlight {

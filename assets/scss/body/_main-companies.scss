@@ -16,8 +16,8 @@
             line-height: $line-hight * 12;
 
             @include lg {
-                font-size: calc($font-size * 10 / 2);
-                line-height: calc($line-hight * 12 /2);
+                font-size: calc($font-size * 10 / 1.2);
+                line-height: calc($line-hight * 12 /1.2);
             }
         }
     }

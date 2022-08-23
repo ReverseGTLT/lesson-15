@@ -1,28 +1,14 @@
 @use "../presets/" as *;
 
-@each $img in first,
-second,
-third,
-fourth {
-    .main-info__gif--#{$img} {
-        width: 632px;
-        height: 632px;
-        background-image: url(../../images/#{$img}.gif);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #FFF8E4;
-    }
-}
-
 .main {
     &-section {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 250px;
         margin-top: 90px;
-        padding-bottom: 150px;
+        padding-bottom: 87px;
 
-        @include md {
+        @include xl {
             row-gap: 150px;
         }
     }
@@ -30,8 +16,8 @@ fourth {
     &-info {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-content: space-between;
-        gap: 137px;
+        align-items: center;
+        gap: 30px;
 
         @include xl {
             grid-template-columns: 1fr;
@@ -42,23 +28,24 @@ fourth {
             display: flex;
             flex-direction: column;
             gap: 30px;
-            justify-content: center;
 
-            @include md {
-                text-align: center;
+            &--second {
+                margin-left: 110px;
+                margin-top: 25px;
+
             }
+            &--third {
+                margin-top: -18px;
+            }
+            &--fourth {
+                margin-left: 110px;
+                padding-bottom: 68px;
 
-            &--order {
-                order: 1;
-
-                @include xl {
-                    order: 0;
-                    text-align: right;
-                }
-
-                @include md {
-                    text-align: center;
-                }
+            }
+            @include xl {
+                margin-left: 0;
+                padding-bottom: 0;
+                margin-top: 0;
             }
         }
 
@@ -66,20 +53,44 @@ fourth {
             font-weight: $font-weight *6;
             font-size: $font-size * 10;
             line-height: $line-hight * 12;
+            &--first {
+                max-width: 500px;
+            }
+            &--second {
+                max-width: 370px;
+            }
+            &--third {
+                max-width: 400px;
+            }
+            &--fourth {
+                max-width: 350px;
+            }
 
             @include lg {
-                font-size: $font-size * 10 * 0.5;
-                line-height: $line-hight * 12 * 0.5;
+                font-size: calc($font-size * 10 / 1.2);
+                line-height: calc($line-hight * 12 / 1.2);
             }
         }
 
         &__description {
             font-size: $font-size * 4;
             line-height: $line-hight * 6;
+            &--first {
+                max-width: 491px;
+            }
+            &--second {
+                max-width: 450px;
+            }
+            &--third {
+                max-width: 520px;
+            }
+            &--fourth {
+                max-width: 520px;
+            }
 
             @include lg {
-                font-size: calc($font-size * 4 / 1.5);
-                line-height: calc($line-hight * 6 / 2);
+                font-size: calc($font-size * 4 / 1.2);
+                line-height: calc($line-hight * 6 / 1.2);
             }
 
         }
@@ -90,27 +101,22 @@ fourth {
             line-height: $line-hight * 6;
 
             @include lg {
-                font-size: calc($font-size * 4 / 1.5);
-                line-height: calc($line-hight * 6 / 2);
-            }
-        }
-
-        &__gif--second,
-        &__gif--fourth {
-            @include xl {
-                justify-self: flex-end;
-            }
-
-            @include md {
-                justify-self: center;
+                font-size: calc($font-size * 4 / 1.2);
+                line-height: calc($line-hight * 6 / 1.2);
             }
         }
 
         &__gif {
-            @include md {
-                justify-self: center;
-                width: 300px;
-                height: 300px;
+            max-width: 632px;
+            &--order {
+                order: -1;
+                @include xl {
+                    order: 0;
+                }
+            }
+            &-image {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -119,3 +125,4 @@ fourth {
         }
     }
 }
+
