@@ -32,6 +32,9 @@ a {
     @include md {
         padding: 0 25px;
     }
+    @include xs-min {
+        padding: 0 25px;
+    }
 }
 
 .container-header {
