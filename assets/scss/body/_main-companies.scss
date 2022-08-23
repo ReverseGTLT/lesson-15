@@ -14,6 +14,10 @@
             font-weight: $font-weight * 6;
             font-size: $font-size * 10;
             line-height: $line-hight * 12;
+            @include lg {
+                font-size: calc($font-size * 10 / 2);
+                line-height: calc($line-hight * 12 /2);
+            }
         }
     }
 
@@ -24,18 +28,9 @@
         gap: 103px;
         align-items: center;
         margin-left: 10px;
+        @include lg {
+            gap: 50px;
+        }
     }
 }
 
-@include xl {
-    .main-companies__title {
-        padding-left: 0px;
-    }
-}
-
-@include lg {
-    .main-companies__title-text {
-        font-size: calc($font-size * 10 / 2);
-        line-height: calc($line-hight * 12 /2);
-    }
-}

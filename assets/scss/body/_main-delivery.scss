@@ -9,9 +9,8 @@
         max-width: 1330px;
         display: grid;
         grid-template-columns: 540px 1fr;
+
         &__info {
-
-
             &-title {
                 font-weight: $font-weight * 6;
                 font-size: $font-size * 13;
@@ -50,6 +49,7 @@
                 border: 0;
                 outline: 1px solid $color-text;
                 cursor: pointer;
+
                 &--highlight {
                     color: $color-total;
                     background-color: $color-btn;
@@ -66,6 +66,7 @@
                 max-width: 370px;
             }
         }
+
         &__picture {
             background-image: url(../../images/mainaccelerate.svg);
             background-repeat: no-repeat;
@@ -81,6 +82,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         padding-bottom: 30px;
+
         &__info {
             &-title {
                 font-size: calc($font-size * 13 /2);
@@ -90,21 +92,27 @@
             &-description {
                 font-size: calc($font-size * 5 /2);
             }
+
             &-explanation {
                 font-size: calc($font-size * 3 /1.5);
             }
+
             &-item:not(:first-child),
             &-item:not(:last-child) {
-                width: 118px;;
+                width: 118px;
+                ;
             }
+
             &-link {
                 font-size: $font-size * 2 + 1;
                 max-width: 118px;
+
                 &--highlight {
                     color: $color-total;
                 }
             }
         }
+
         &__picture {
             background-position: top;
         }
@@ -117,13 +125,14 @@
             font-size: calc($font-size * 13 /3);
             line-height: calc($line-hight * 14 / 3);
         }
+
         &-description {
             font-size: calc($font-size * 5 /2);
             line-height: calc($line-hight * 7 /2);
         }
+
         &-explanation {
             font-size: calc($font-size * 3 /1.5);
         }
     }
 }
-
