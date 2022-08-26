@@ -26,15 +26,18 @@ a {
     background-color: $color-total;
 }
 
-.main-container {
+.main-container,
+.footer-container {
     padding: 0 75px;
 
     @include md {
         padding: 0 25px;
     }
+
     @include xs-min {
         padding: 0 25px;
     }
+
     @include xl-min {
         padding: 0 75px;
     }
@@ -47,9 +50,11 @@ a {
     @include md {
         padding: 0 25px;
     }
+
     @include xs-min {
         padding: 0 25px;
     }
+
     @include xl-min {
         padding: 0 75px;
     }

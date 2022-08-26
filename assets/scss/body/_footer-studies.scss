@@ -1,0 +1,102 @@
+@use "../presets" as *;
+
+.footer {
+    background-color: $color-studies;
+
+    &-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        gap: 34px;
+
+        @include lg {
+            text-align: center;
+        }
+
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &-article {
+        margin-top: -6px;
+        max-width: 320px;
+
+        @include lg {
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    &-title {
+        font-size: $font-size * 8;
+        font-weight: $font-weight * 6;
+        line-height: $line-hight * 10;
+        max-width: 370px;
+
+        @include lg {
+            font-size: calc($font-size * 8 / 1.2);
+            line-height: calc($line-hight * 10 / 1.2);
+        }
+    }
+
+    &-picture {
+        margin-top: 28px;
+        padding-bottom: 27px;
+    }
+
+    &-logo {
+        padding-bottom: 7px;
+    }
+
+    &-description {
+        font-size: $font-size * 4;
+        line-height: $line-hight * 6;
+        max-width: 320px;
+    }
+
+    &-footnote {
+        font-size: $font-size * 4;
+        font-weight: $font-weight * 6;
+        line-height: $line-hight * 6;
+        max-width: 320px;
+        margin-top: 15px;
+    }
+
+    &-product {
+        &__title {
+            font-size: $font-size * 4;
+            font-weight: $font-weight * 6;
+            line-height: $line-hight * 5;
+            padding-bottom: 18px;
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__item {
+            &-link {
+                font-size: $font-size * 3;
+                line-height: $line-hight * 3;
+            }
+        }
+
+    }
+}
+
+.footer>.footer-container {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 95px;
+    gap: 120px;
+
+    @include lg {
+        flex-direction: column;
+    }
+}

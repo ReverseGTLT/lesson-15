@@ -20,6 +20,7 @@
 
     &-logo {
         padding-right: 51px;
+
         @include lg {
             padding-right: 0;
         }
@@ -59,9 +60,7 @@
             font-weight: $font-weight * 4;
             line-height: $line-hight * 4;
             text-align: left;
-            @include sm-min {
-                font-size: $font-size * 3;
-            }
+
         }
     }
 
@@ -87,6 +86,7 @@
             @include btn-header-size;
             background-color: $color-total;
             border: 0;
+            padding: 5px;
 
             &--highlight {
                 color: $color-total;

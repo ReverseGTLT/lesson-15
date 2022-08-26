@@ -9,6 +9,7 @@
         max-width: 1330px;
         display: grid;
         grid-template-columns: 540px 1fr;
+
         @include xl {
             grid-template-columns: 1fr;
 
@@ -38,6 +39,7 @@
                 text-align: center;
                 margin: auto;
             }
+
             &-title {
                 font-weight: $font-weight * 6;
                 font-size: $font-size * 13;
@@ -69,6 +71,7 @@
                 margin: 50px 0 25px 0;
                 display: flex;
                 gap: 12px;
+
                 @include lg {
                     justify-content: center;
                 }
@@ -93,16 +96,14 @@
             &-link {
                 font-weight: $font-weight * 6;
                 font-size: $font-size * 3 + 1;
-                line-height: $line-hight * 12;
+                padding: 5px;
                 @include btn-main-size;
-                padding: 0 5px;
                 background-color: $color-total;
                 border: 0;
                 outline: 1px solid $color-text;
                 cursor: pointer;
 
                 @include lg {
-                    font-size: calc($font-size * 3 /1.1);
                     max-width: 118px;
                 }
 
@@ -119,6 +120,7 @@
                 font-size: $font-size * 3;
                 line-height: $line-hight * 5;
                 max-width: 370px;
+
                 @include lg {
                     text-align: center;
                     margin: auto;
@@ -130,6 +132,7 @@
             @include lg {
                 max-height: 400px;
             }
+
             &-image {
                 width: 100%;
                 height: auto;

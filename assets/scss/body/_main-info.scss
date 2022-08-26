@@ -23,6 +23,7 @@
             grid-template-columns: 1fr;
             gap: 50px;
         }
+
         @include lg {
             margin: auto;
             text-align: center;
@@ -39,14 +40,17 @@
                 margin-top: 25px;
 
             }
+
             &--third {
                 margin-top: -18px;
             }
+
             &--fourth {
                 margin-left: 110px;
                 padding-bottom: 68px;
 
             }
+
             @include xl {
                 margin-left: 0;
                 padding-bottom: 0;
@@ -58,26 +62,34 @@
             font-weight: $font-weight *6;
             font-size: $font-size * 10;
             line-height: $line-hight * 12;
+
             &--first {
                 max-width: 500px;
+
                 @include lg {
                     max-width: 100%;
                 }
             }
+
             &--second {
                 max-width: 370px;
+
                 @include lg {
                     max-width: 100%;
                 }
             }
+
             &--third {
                 max-width: 400px;
+
                 @include lg {
                     max-width: 100%;
                 }
             }
+
             &--fourth {
                 max-width: 350px;
+
                 @include lg {
                     max-width: 100%;
                 }
@@ -92,26 +104,34 @@
         &__description {
             font-size: $font-size * 4;
             line-height: $line-hight * 6;
+
             &--first {
                 max-width: 491px;
+
                 @include lg {
                     max-width: 100%;
                 }
             }
+
             &--second {
                 max-width: 450px;
+
                 @include lg {
                     max-width: 100%;
                 }
             }
+
             &--third {
                 max-width: 520px;
+
                 @include lg {
                     max-width: 100%;
                 }
             }
+
             &--fourth {
                 max-width: 520px;
+
                 @include lg {
                     max-width: 100%;
                 }
@@ -137,15 +157,19 @@
 
         &__gif {
             max-width: 632px;
+
             @include lg {
                 margin: auto;
             }
+
             &--order {
                 order: -1;
+
                 @include xl {
                     order: 0;
                 }
             }
+
             &-image {
                 width: 100%;
                 height: auto;
@@ -157,4 +181,3 @@
         }
     }
 }
-
