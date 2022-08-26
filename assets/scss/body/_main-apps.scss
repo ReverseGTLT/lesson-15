@@ -1,67 +1,67 @@
 @use "../presets" as *;
 
 .main {
-    &-container {
+  &-container {
 
-        @include md {
-            padding: 0 25px;
-        }
+    @include md {
+      padding: 0 25px;
+    }
+  }
+
+  &-bg {
+    background-color: #FFF8E4;
+  }
+
+  &-apps {
+    &__title {
+      text-align: center;
+      font-weight: $font-weight * 6;
+      font-size: $font-size * 10;
+      line-height: $line-hight * 12;
+      padding-top: 120px;
+
+      @include lg {
+        font-size: calc($font-size * 10 / 1.5);
+        line-height: calc($line-hight * 12 / 1.5);
+      }
     }
 
-    &-bg {
-        background-color: #FFF8E4;
-    }
+    &__actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 75px;
+      column-gap: 110px;
+      padding: 78px 40px 144px;
 
-    &-apps {
-        &__title {
-            text-align: center;
-            font-weight: $font-weight * 6;
-            font-size: $font-size * 10;
-            line-height: $line-hight * 12;
-            padding-top: 120px;
+      @include xl {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-            @include lg {
-                font-size: calc($font-size * 10 / 1.5);
-                line-height: calc($line-hight * 12 / 1.5);
-            }
+      @include sm {
+        grid-template-columns: 1fr;
+      }
+
+      &-container {
+        max-width: 330px;
+        text-align: center;
+
+        @include sm {
+          margin: auto;
         }
+      }
 
-        &__actions {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            row-gap: 75px;
-            column-gap: 110px;
-            padding: 78px 40px 144px;
+      &-title {
+        font-weight: $font-weight * 6;
+        font-size: $font-size * 5;
+        line-height: $line-hight * 7;
+        padding: 22px 0;
+      }
 
-            @include xl {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @include sm {
-                grid-template-columns: 1fr;
-            }
-
-            &-container {
-                max-width: 330px;
-                text-align: center;
-
-                @include sm {
-                    margin: auto;
-                }
-            }
-
-            &-title {
-                font-weight: $font-weight * 6;
-                font-size: $font-size * 5;
-                line-height: $line-hight * 7;
-                padding: 22px 0;
-            }
-
-            &-description {
-                font-weight: $font-weight * 4;
-                font-size: $font-size * 3 + 3;
-                line-height: $line-hight * 5;
-            }
-        }
+      &-description {
+        font-weight: $font-weight * 4;
+        font-size: $font-size * 3 + 3;
+        line-height: $line-hight * 5;
+      }
     }
+  }
 }

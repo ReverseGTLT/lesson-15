@@ -1,103 +1,103 @@
 @use "../presets" as *;
 
 .header {
-    padding: 25px 0 23px 0;
-    display: grid;
-    grid-template-columns: 180px 1fr 247px;
+  padding: 25px 0 23px 0;
+  display: grid;
+  grid-template-columns: 180px 1fr 247px;
+  align-items: center;
+  gap: 5px;
+
+  @include xl {
+    grid-template-columns: 150px 1fr 247px;
+  }
+
+  @include lg {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    justify-items: center;
+
+  }
+
+  &-logo {
+    padding-right: 51px;
+
+    @include lg {
+      padding-right: 0;
+    }
+  }
+
+  &-navbar {
+    @include lg {
+      justify-content: left;
+      padding-right: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    gap: 5px;
+    gap: 54px;
+
+    list-style: none;
 
     @include xl {
-        grid-template-columns: 150px 1fr 247px;
+      gap: 20px;
     }
 
     @include lg {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        justify-items: center;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    @include sm {
+      gap: 15px;
+    }
+
+    &__link {
+      font-size: $font-size * 3;
+      font-weight: $font-weight * 4;
+      line-height: $line-hight * 4;
+      text-align: left;
+
+    }
+  }
+
+  &-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__btn:not(:last-child) {
+      outline: 1px solid $color-text;
 
     }
 
-    &-logo {
-        padding-right: 51px;
+    &__btn:not(:first-child) {
+      outline: 1px solid $color-btn;
 
-        @include lg {
-            padding-right: 0;
-        }
     }
 
-    &-navbar {
-        @include lg {
-            justify-content: left;
-            padding-right: 0;
-            flex-wrap: wrap;
-        }
+    &__link {
+      font-weight: $font-weight * 6;
+      font-size: $font-size * 3 + 1;
+      display: block;
+      @include btn-header-size;
+      background-color: $color-total;
+      border: 0;
+      padding: 5px;
+
+      &--highlight {
+        color: $color-total;
+        padding: 13px;
+        text-align: center;
+        background-color: $color-btn;
+      }
     }
 
-    &-list {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 54px;
-
-        list-style: none;
-
-        @include xl {
-            gap: 20px;
-        }
-
-        @include lg {
-            flex-wrap: wrap;
-            justify-content: left;
-        }
-
-        @include sm {
-            gap: 15px;
-        }
-
-        &__link {
-            font-size: $font-size * 3;
-            font-weight: $font-weight * 4;
-            line-height: $line-hight * 4;
-            text-align: left;
-
-        }
+    &__link:hover {
+      cursor: pointer;
     }
-
-    &-login {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        &__btn:not(:last-child) {
-            outline: 1px solid $color-text;
-
-        }
-
-        &__btn:not(:first-child) {
-            outline: 1px solid $color-btn;
-
-        }
-
-        &__link {
-            font-weight: $font-weight * 6;
-            font-size: $font-size * 3 + 1;
-            display: block;
-            @include btn-header-size;
-            background-color: $color-total;
-            border: 0;
-            padding: 5px;
-
-            &--highlight {
-                color: $color-total;
-                padding: 13px;
-                text-align: center;
-                background-color: $color-btn;
-            }
-        }
-
-        &__link:hover {
-            cursor: pointer;
-        }
-    }
+  }
 }

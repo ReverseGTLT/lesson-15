@@ -1,145 +1,145 @@
 @use "../presets" as *;
 
 .main {
-    background-color: $color-total;
+  background-color: $color-total;
 
-    &-delivery {
-        padding-bottom: 172px;
-        margin-top: 85px;
-        max-width: 1330px;
-        display: grid;
-        grid-template-columns: 540px 1fr;
+  &-delivery {
+    padding-bottom: 172px;
+    margin-top: 85px;
+    max-width: 1330px;
+    display: grid;
+    grid-template-columns: 540px 1fr;
 
-        @include xl {
-            grid-template-columns: 1fr;
+    @include xl {
+      grid-template-columns: 1fr;
 
-            padding-bottom: 30px;
-        }
+      padding-bottom: 30px;
+    }
+
+    @include lg {
+      grid-template-columns: 1fr;
+
+      padding-bottom: 320px;
+    }
+
+    @include md {
+      grid-template-columns: 1fr;
+
+      padding-bottom: 200px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+
+      padding-bottom: 140px;
+    }
+
+    &__info {
+      @include lg {
+        text-align: center;
+        margin: auto;
+      }
+
+      &-title {
+        font-weight: $font-weight * 6;
+        font-size: $font-size * 13;
+        line-height: $line-hight * 14;
+        margin-bottom: 51px;
+        max-width: 550px;
 
         @include lg {
-            grid-template-columns: 1fr;
-
-            padding-bottom: 320px;
+          font-size: calc($font-size * 13 /1.2);
+          line-height: calc($line-hight * 14 / 1.2);
         }
 
-        @include md {
-            grid-template-columns: 1fr;
 
-            padding-bottom: 200px;
+      }
+
+      &-description {
+        font-size: $font-size * 5;
+        max-width: 471px;
+        line-height: $line-hight * 7;
+
+        @include lg {
+          text-align: center;
+          margin: auto;
         }
 
-        @include sm {
-            grid-template-columns: 1fr;
+      }
 
-            padding-bottom: 140px;
+      &-btn {
+        margin: 50px 0 25px 0;
+        display: flex;
+        gap: 12px;
+
+        @include lg {
+          justify-content: center;
+        }
+      }
+
+      &-item:not(:first-child) {
+        text-align: center;
+
+        @include lg {
+          width: 118px;
+        }
+      }
+
+      &-item:not(:last-child) {
+        text-align: center;
+
+        @include lg {
+          width: 118px;
+        }
+      }
+
+      &-link {
+        font-weight: $font-weight * 6;
+        font-size: $font-size * 3 + 1;
+        padding: 5px;
+        @include btn-main-size;
+        background-color: $color-total;
+        border: 0;
+        outline: 1px solid $color-text;
+        cursor: pointer;
+
+        @include lg {
+          max-width: 118px;
         }
 
-        &__info {
-            @include lg {
-                text-align: center;
-                margin: auto;
-            }
-
-            &-title {
-                font-weight: $font-weight * 6;
-                font-size: $font-size * 13;
-                line-height: $line-hight * 14;
-                margin-bottom: 51px;
-                max-width: 550px;
-
-                @include lg {
-                    font-size: calc($font-size * 13 /1.2);
-                    line-height: calc($line-hight * 14 / 1.2);
-                }
-
-
-            }
-
-            &-description {
-                font-size: $font-size * 5;
-                max-width: 471px;
-                line-height: $line-hight * 7;
-
-                @include lg {
-                    text-align: center;
-                    margin: auto;
-                }
-
-            }
-
-            &-btn {
-                margin: 50px 0 25px 0;
-                display: flex;
-                gap: 12px;
-
-                @include lg {
-                    justify-content: center;
-                }
-            }
-
-            &-item:not(:first-child) {
-                text-align: center;
-
-                @include lg {
-                    width: 118px;
-                }
-            }
-
-            &-item:not(:last-child) {
-                text-align: center;
-
-                @include lg {
-                    width: 118px;
-                }
-            }
-
-            &-link {
-                font-weight: $font-weight * 6;
-                font-size: $font-size * 3 + 1;
-                padding: 5px;
-                @include btn-main-size;
-                background-color: $color-total;
-                border: 0;
-                outline: 1px solid $color-text;
-                cursor: pointer;
-
-                @include lg {
-                    max-width: 118px;
-                }
-
-                &--highlight {
-                    color: $color-total;
-                    background-color: $color-btn;
-                    outline: 1px solid $color-btn;
-                    @include btn-main-size;
-                }
-            }
-
-            &-explanation {
-                font-weight: $font-weight * 4;
-                font-size: $font-size * 3;
-                line-height: $line-hight * 5;
-                max-width: 370px;
-
-                @include lg {
-                    text-align: center;
-                    margin: auto;
-                }
-            }
+        &--highlight {
+          color: $color-total;
+          background-color: $color-btn;
+          outline: 1px solid $color-btn;
+          @include btn-main-size;
         }
+      }
 
-        &__picture {
-            @include lg {
-                max-height: 400px;
-            }
+      &-explanation {
+        font-weight: $font-weight * 4;
+        font-size: $font-size * 3;
+        line-height: $line-hight * 5;
+        max-width: 370px;
 
-            &-image {
-                width: 100%;
-                height: auto;
-                margin-top: 66px;
-            }
-
-
+        @include lg {
+          text-align: center;
+          margin: auto;
         }
+      }
     }
+
+    &__picture {
+      @include lg {
+        max-height: 400px;
+      }
+
+      &-image {
+        width: 100%;
+        height: auto;
+        margin-top: 66px;
+      }
+
+
+    }
+  }
 }

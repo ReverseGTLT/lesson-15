@@ -1,108 +1,108 @@
 @use "../presets" as *;
 
 .main-rate {
-    &__text {
-        border-right: 1px solid $color-text;
-        display: flex;
-        align-items: center;
-        min-height: 168px;
+  &__text {
+    border-right: 1px solid $color-text;
+    display: flex;
+    align-items: center;
+    min-height: 168px;
 
-        @include xl {
-            border-bottom: 1px solid $color-text;
-            border-right: none;
-            gap: 30px;
-            padding-bottom: 30px;
-        }
-
-        @include md {
-            flex-direction: column;
-        }
-
-        &-title {
-            font-size: $font-size * 7;
-            font-weight: $font-weight * 6;
-            line-height: $line-hight * 10;
-            max-width: 465px;
-            margin-left: 48px;
-            padding-right: 119px;
-
-            @include xl {
-                padding-right: 0;
-                margin-left: 0;
-                text-align: center;
-            }
-        }
+    @include xl {
+      border-bottom: 1px solid $color-text;
+      border-right: none;
+      gap: 30px;
+      padding-bottom: 30px;
     }
 
-    &__logo {
-        display: flex;
-        gap: 66px;
-        align-items: center;
-        margin-left: 71px;
-
-        @include xl {
-            margin-left: 0;
-            justify-content: center;
-        }
-
-        @include md {
-            flex-wrap: wrap;
-            text-align: center;
-        }
+    @include md {
+      flex-direction: column;
     }
 
-    &__gsquared {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+    &-title {
+      font-size: $font-size * 7;
+      font-weight: $font-weight * 6;
+      line-height: $line-hight * 10;
+      max-width: 465px;
+      margin-left: 48px;
+      padding-right: 119px;
 
-        &-footnote {
-            font-size: $font-size * 3;
-            line-height: $line-hight * 5;
-            letter-spacing: 0.8px;
-            max-width: 132px;
-        }
+      @include xl {
+        padding-right: 0;
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
 
-        &-star {
-            min-width: 132px;
-        }
+  &__logo {
+    display: flex;
+    gap: 66px;
+    align-items: center;
+    margin-left: 71px;
 
-        &-image {
-            padding-right: 2.7px;
-        }
+    @include xl {
+      margin-left: 0;
+      justify-content: center;
     }
 
-    &__capterra {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        &-footnote {
-            font-size: $font-size * 3;
-            line-height: $line-hight * 5;
-            letter-spacing: 0.8px;
-            max-width: 132px;
-        }
-
-        &-star {
-            min-width: 132px;
-        }
-
-        &-image {
-            padding-right: 2.7px;
-        }
+    @include md {
+      flex-wrap: wrap;
+      text-align: center;
     }
+  }
+
+  &__gsquared {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-footnote {
+      font-size: $font-size * 3;
+      line-height: $line-hight * 5;
+      letter-spacing: 0.8px;
+      max-width: 132px;
+    }
+
+    &-star {
+      min-width: 132px;
+    }
+
+    &-image {
+      padding-right: 2.7px;
+    }
+  }
+
+  &__capterra {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-footnote {
+      font-size: $font-size * 3;
+      line-height: $line-hight * 5;
+      letter-spacing: 0.8px;
+      max-width: 132px;
+    }
+
+    &-star {
+      min-width: 132px;
+    }
+
+    &-image {
+      padding-right: 2.7px;
+    }
+  }
 }
 
 .main-rate>.main-container {
-    background-color: $color-rate;
-    display: flex;
-    padding-top: 82px;
-    padding-bottom: 81px;
+  background-color: $color-rate;
+  display: flex;
+  padding-top: 82px;
+  padding-bottom: 81px;
 
-    @include xl {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-    }
+  @include xl {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
 }

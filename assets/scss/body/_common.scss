@@ -1,61 +1,61 @@
 @use "../presets" as *;
 
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Graphik LCG", sans-serif;
-    background-color: $color-body;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Graphik LCG", sans-serif;
+  background-color: $color-body;
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: $color-text;
+  text-decoration: none;
+  color: $color-text;
 }
 
 .container {
-    max-width: $width-site;
-    margin: 0 auto;
-    background-color: $color-total;
+  max-width: $width-site;
+  margin: 0 auto;
+  background-color: $color-total;
 }
 
 .main-container,
 .footer-container {
+  padding: 0 75px;
+
+  @include md {
+    padding: 0 25px;
+  }
+
+  @include xs-min {
+    padding: 0 25px;
+  }
+
+  @include xl-min {
     padding: 0 75px;
-
-    @include md {
-        padding: 0 25px;
-    }
-
-    @include xs-min {
-        padding: 0 25px;
-    }
-
-    @include xl-min {
-        padding: 0 75px;
-    }
+  }
 }
 
 .container-header {
-    border-bottom: 1px solid $color-body;
+  border-bottom: 1px solid $color-body;
+  padding: 0 75px;
+
+  @include md {
+    padding: 0 25px;
+  }
+
+  @include xs-min {
+    padding: 0 25px;
+  }
+
+  @include xl-min {
     padding: 0 75px;
-
-    @include md {
-        padding: 0 25px;
-    }
-
-    @include xs-min {
-        padding: 0 25px;
-    }
-
-    @include xl-min {
-        padding: 0 75px;
-    }
+  }
 }

@@ -1,58 +1,58 @@
 @use "../presets" as *;
 
 .main-integrate {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 166px;
-    padding-bottom: 162px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 166px;
+  padding-bottom: 162px;
 
-    &__title {
-        font-size: $font-size * 13;
-        font-weight: $font-weight * 6;
-        line-height: $line-hight * 15;
-        max-width: 791px;
-        margin: auto;
+  &__title {
+    font-size: $font-size * 13;
+    font-weight: $font-weight * 6;
+    line-height: $line-hight * 15;
+    max-width: 791px;
+    margin: auto;
 
-        @include lg {
-            font-size: calc($font-size * 13 / 1.2);
-            line-height: calc($line-hight * 15 / 1.2);
-        }
+    @include lg {
+      font-size: calc($font-size * 13 / 1.2);
+      line-height: calc($line-hight * 15 / 1.2);
     }
+  }
 
-    &__description {
-        font-size: $font-size * 5;
-        line-height: $line-hight * 6;
-        max-width: 540px;
-        margin: auto;
-        padding-bottom: 25px;
+  &__description {
+    font-size: $font-size * 5;
+    line-height: $line-hight * 6;
+    max-width: 540px;
+    margin: auto;
+    padding-bottom: 25px;
+  }
+
+  &__picture {
+    max-width: 1023px;
+    max-height: 445px;
+
+    &-image {
+      width: 100%;
+      height: auto;
     }
+  }
 
-    &__picture {
-        max-width: 1023px;
-        max-height: 445px;
+  &__item {
 
-        &-image {
-            width: 100%;
-            height: auto;
-        }
+    margin-top: 32px;
+
+    &-btn {
+      font-weight: $font-weight * 6;
+      font-size: $font-size * 3 + 1;
+      display: block;
+      @include btn-integrate-size;
+      background-color: $color-btn;
+      border: 0;
+      color: $color-total;
+      margin: auto;
+      padding: 5px;
+      cursor: pointer;
     }
-
-    &__item {
-
-        margin-top: 32px;
-
-        &-btn {
-            font-weight: $font-weight * 6;
-            font-size: $font-size * 3 + 1;
-            display: block;
-            @include btn-integrate-size;
-            background-color: $color-btn;
-            border: 0;
-            color: $color-total;
-            margin: auto;
-            padding: 5px;
-            cursor: pointer;
-        }
-    }
+  }
 }

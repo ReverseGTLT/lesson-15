@@ -1,37 +1,37 @@
 @use "../presets" as *;
 
 .main-companies {
-    padding: 108px 0 102px 0;
-    background-color: $color-companies;
+  padding: 108px 0 102px 0;
+  background-color: $color-companies;
 
-    &__title {
-        max-width: 720px;
-        margin-bottom: 70px;
-        margin: 0 auto 68px;
+  &__title {
+    max-width: 720px;
+    margin-bottom: 70px;
+    margin: 0 auto 68px;
 
-        &-text {
-            text-align: center;
-            font-weight: $font-weight * 6;
-            font-size: $font-size * 10;
-            line-height: $line-hight * 12;
+    &-text {
+      text-align: center;
+      font-weight: $font-weight * 6;
+      font-size: $font-size * 10;
+      line-height: $line-hight * 12;
 
-            @include lg {
-                font-size: calc($font-size * 10 / 1.2);
-                line-height: calc($line-hight * 12 /1.2);
-            }
-        }
+      @include lg {
+        font-size: calc($font-size * 10 / 1.2);
+        line-height: calc($line-hight * 12 /1.2);
+      }
     }
+  }
 
-    &__description {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 103px;
-        align-items: center;
-        margin-left: 10px;
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 103px;
+    align-items: center;
+    margin-left: 10px;
 
-        @include lg {
-            gap: 50px;
-        }
+    @include lg {
+      gap: 50px;
     }
+  }
 }
